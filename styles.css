@@ -99,10 +99,36 @@ main {
 }
 
 .hero {
+  position: relative;
+  isolation: isolate;
   min-height: calc(100vh - 68px);
   display: grid;
   align-content: center;
   padding: 5rem 0 4rem;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 2.2rem;
+  right: -8vw;
+  width: min(760px, 62vw);
+  height: min(760px, 74vh);
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(248, 248, 244, 0.12), rgba(248, 248, 244, 0.12)),
+    url("assets/newcastle-osm-hero-map.png") center / cover no-repeat;
+  border-radius: 8px;
+  filter: grayscale(1) saturate(0.2) contrast(1.08);
+  opacity: 0.28;
+  transform: rotate(-1.5deg);
+  mask-image: radial-gradient(circle at 54% 50%, #000 0%, rgba(0, 0, 0, 0.78) 42%, transparent 74%);
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 .kicker,
@@ -425,6 +451,14 @@ code {
   .hero {
     min-height: auto;
     padding-top: 3.5rem;
+  }
+
+  .hero::before {
+    top: 5rem;
+    right: -18rem;
+    width: 720px;
+    height: 620px;
+    opacity: 0.16;
   }
 
   .stat-band,
