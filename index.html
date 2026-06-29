@@ -8,6 +8,7 @@
       name="description"
       content="A personal Newcastle Metro map story about deprivation, life expectancy and why local health inequality must change."
     >
+    <meta name="robots" content="noarchive">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -44,7 +45,6 @@
         <div class="hero-actions" aria-label="Page actions">
           <a class="button primary" href="#map">Watch the map</a>
           <a class="button" href="/technical-note/">Read the method</a>
-          <a class="button" href="data/metro_station_msoa_life_expectancy_deprivation_data.csv">Download the data</a>
         </div>
       </section>
 
@@ -61,12 +61,15 @@
           <video
             id="metroVideo"
             controls
+            controlslist="nodownload noremoteplayback"
+            disablepictureinpicture
+            disableremoteplayback
+            oncontextmenu="return false"
             preload="metadata"
             playsinline
             src="assets/metro_life_expectancy_male_female_comparison_animation.mp4"
           >
-            Your browser does not support embedded video. You can download the
-            file from the assets folder.
+            Your browser does not support embedded video.
           </video>
         </div>
 
@@ -209,12 +212,10 @@
         </p>
       </section>
 
-      <section class="source-strip" aria-label="Data and source links">
+      <section class="source-strip" aria-label="Source links">
         <a href="/technical-note/">Technical note</a>
-        <a href="data/metro_station_msoa_life_expectancy_deprivation_data.csv">Station data CSV</a>
         <a href="https://travelnortheast.uk/ways-to-travel/metro/metro-maps/">Metro map source</a>
         <a href="https://commons.wikimedia.org/wiki/File:Newcastle_upon_Tyne_OSM_02.png">Hero map image</a>
-        <a href="https://github.com/akalysis/metro_map_le">GitHub repository</a>
       </section>
     </main>
 
@@ -226,6 +227,26 @@
     <script>
       const video = document.querySelector("#metroVideo");
       const buttons = document.querySelectorAll("[data-time]");
+
+      video.addEventListener("contextmenu", (event) => {
+        event.preventDefault();
+      });
+
+      document.addEventListener("copy", (event) => {
+        event.preventDefault();
+      });
+
+      document.addEventListener("cut", (event) => {
+        event.preventDefault();
+      });
+
+      document.addEventListener("dragstart", (event) => {
+        event.preventDefault();
+      });
+
+      document.addEventListener("contextmenu", (event) => {
+        event.preventDefault();
+      });
 
       buttons.forEach((button) => {
         button.addEventListener("click", () => {
