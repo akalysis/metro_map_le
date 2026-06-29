@@ -10,6 +10,9 @@ about Newcastle, deprivation and life expectancy around the Tyne and Wear Metro.
 - `assets/metro_life_expectancy_male_female_comparison_animation.mp4` - the embedded animation.
 - `data/metro_station_msoa_life_expectancy_deprivation_data.csv` - station-local data used in the animation.
 
+The base Metro map used in the animation was sourced from Travel North East:
+https://travelnortheast.uk/ways-to-travel/metro/metro-maps/
+
 ## Deployment
 
 The site is plain static HTML/CSS and can be deployed directly on Vercel from the
