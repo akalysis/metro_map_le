@@ -12,8 +12,8 @@ about Newcastle, deprivation and life expectancy around the Tyne and Wear Metro.
 The base Metro map used in the animation was sourced from Travel North East:
 https://travelnortheast.uk/ways-to-travel/metro/metro-maps/
 
-The faded hero background map is `assets/newcastle-osm-hero-map.png`, sourced
-from Wikimedia Commons:
+The faded Newcastle map at the start of the page is
+`assets/newcastle-osm-hero-map.png`, sourced from Wikimedia Commons:
 https://commons.wikimedia.org/wiki/File:Newcastle_upon_Tyne_OSM_02.png
 
 ## Deployment
