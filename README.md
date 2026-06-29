@@ -19,7 +19,7 @@ https://commons.wikimedia.org/wiki/File:Newcastle_upon_Tyne_OSM_02.png
 ## Deployment
 
 The site is plain static HTML/CSS and can be deployed directly on Vercel from the
-repository root. No build step is required.
+repository root.  No build step is required.
 
 The public page intentionally does not offer download links for the video or the
 working dataset.
