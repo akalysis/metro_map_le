@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>I was born in D1 | Newcastle Metro life expectancy map</title>
+    <meta
+      name="description"
+      content="A personal Newcastle Metro map story about deprivation, life expectancy and why local health inequality must change."
+    >
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#story">Skip to story</a>
+
+    <header class="site-header">
+      <a class="brand" href="/">Metro life expectancy</a>
+      <nav aria-label="Primary navigation">
+        <a href="#map">Map</a>
+        <a href="#numbers">Numbers</a>
+        <a href="#change">Change</a>
+        <a href="/technical-note/">Technical note</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="story">
+        <p class="kicker">Newcastle, deprivation and life expectancy</p>
+        <h1>I was born in D1. This map made that feel different.</h1>
+        <p class="lede">
+          D1 means Index of Multiple Deprivation decile 1: one of the most deprived
+          10% of neighbourhoods in England. The place I was born was ranked
+          478 out of 33,755 small areas, where rank 1 is the most deprived.
+          That puts it in the most deprived 1.4% nationally.
+        </p>
+        <p>
+          I was born many years ago. This map is not a prediction about my life,
+          or anyone else's. It uses recent area life expectancy estimates from
+          2019 to 2023. But when the geography is this familiar, the pattern is
+          hard to treat as abstract. These are places I know. These are routes
+          people actually take. These are differences that should not feel normal.
+        </p>
+        <div class="hero-actions" aria-label="Page actions">
+          <a class="button primary" href="#map">Watch the map</a>
+          <a class="button" href="/technical-note/">Read the method</a>
+          <a class="button" href="data/metro_station_msoa_life_expectancy_deprivation_data.csv">Download the data</a>
+        </div>
+      </section>
+
+      <section class="map-stage" id="map" aria-labelledby="map-heading">
+        <div class="section-label">The map</div>
+        <h2 id="map-heading">The same Metro map, but with life expectancy on it</h2>
+        <p class="section-intro">
+          The animation keeps the Metro map at the centre and asks a simple
+          question: how far apart are the life chances of places that sit on the
+          same network?
+        </p>
+
+        <div class="video-frame">
+          <video
+            id="metroVideo"
+            controls
+            preload="metadata"
+            playsinline
+            src="assets/metro_life_expectancy_male_female_comparison_animation.mp4"
+          >
+            Your browser does not support embedded video. You can download the
+            file from the assets folder.
+          </video>
+        </div>
+
+        <div class="chapter-bar" aria-label="Animation chapters">
+          <button type="button" data-time="0">Opening</button>
+          <button type="button" data-time="12">Measure</button>
+          <button type="button" data-time="24">Whole map</button>
+          <button type="button" data-time="36">D1 explained</button>
+          <button type="button" data-time="48">Lower LE</button>
+          <button type="button" data-time="59">Higher LE</button>
+          <button type="button" data-time="69">Adjacent gap</button>
+          <button type="button" data-time="77">Men vs women</button>
+        </div>
+      </section>
+
+      <section class="stat-band" id="numbers" aria-labelledby="numbers-heading">
+        <div>
+          <p class="section-label">The numbers</p>
+          <h2 id="numbers-heading">What the map is asking us to face</h2>
+        </div>
+        <div class="stat-grid">
+          <article class="stat-card accent-red">
+            <p class="stat-value">13.7 years</p>
+            <h3>Largest male gap</h3>
+            <p>Byker is 69.7 years. Ilford Road and South Gosforth are 83.4 years.</p>
+          </article>
+          <article class="stat-card accent-teal">
+            <p class="stat-value">9.0 years</p>
+            <h3>Nearby contrast</h3>
+            <p>Fawdon is 74.4 years. South Gosforth is 83.4 years.</p>
+          </article>
+          <article class="stat-card accent-gold">
+            <p class="stat-value">6.1 years</p>
+            <h3>Male deprivation gap</h3>
+            <p>D9/D10 station-local areas average 79.5 years. D1/D2 areas average 73.4 years.</p>
+          </article>
+          <article class="stat-card accent-blue">
+            <p class="stat-value">4.5 years</p>
+            <h3>Female deprivation gap</h3>
+            <p>D9/D10 station-local areas average 83.3 years. D1/D2 areas average 78.8 years.</p>
+          </article>
+        </div>
+      </section>
+
+      <article class="essay">
+        <section>
+          <h2>A map I know by feel</h2>
+          <p>
+            I grew up knowing Newcastle as a set of lived places, not as a table
+            of indicators. The Metro map carries that feeling very quickly. You
+            can see a station name and already know something about the streets,
+            the accents, the journeys, the memories attached to it.
+          </p>
+          <p>
+            That is why this work lands differently for me. It takes a map people
+            recognise and puts a health inequality onto it. Not as a distant
+            regional average, not as a national chart, but as a set of local
+            contrasts. A few stops can carry years of difference.
+          </p>
+        </section>
+
+        <section>
+          <h2>What health means here</h2>
+          <p>
+            The main measure is life expectancy at birth for the MSOA around each
+            Metro station. MSOAs are small statistical areas used in public health
+            reporting. A station does not have its own life expectancy, so the
+            map uses the best local area estimate around the station.
+          </p>
+          <p>
+            That distinction matters. This is not saying that every person in
+            Byker, Fawdon, Gateshead, South Gosforth or Ilford Road will live to
+            the number shown. It is saying that the conditions around places are
+            unequal enough to show up in one of the most basic measures of health:
+            expected length of life.
+          </p>
+        </section>
+
+        <section>
+          <h2>The nearby shock</h2>
+          <p>
+            Inequality is sometimes spoken about as if it sits far away, somewhere
+            else, in another kind of place. The Metro map challenges that. The
+            Fawdon to South Gosforth comparison is about adjacency, not distance.
+            On this analysis the male life expectancy estimate moves from 74.4
+            years to 83.4 years.
+          </p>
+          <p>
+            That is a 9.0-year difference between nearby station-local areas. The
+            point is not to blame places or people. The point is to make visible
+            the scale of difference that can exist within a city people think
+            they already understand.
+          </p>
+        </section>
+
+        <section>
+          <h2>What does this mean for me?</h2>
+          <p>
+            I was born in D1, in an area ranked 478 out of 33,755. I cannot take
+            a current area estimate and read my own life from it. Nobody should.
+            I was born many years before the 2019 to 2023 data period used here.
+          </p>
+          <p>
+            But I can ask what it means to be from a place where disadvantage has
+            been allowed to cluster so persistently that it is visible in health
+            and mortality. I can ask what it means when a city's inequalities are
+            so local that they can be traced along a public transport map. And I
+            can ask the question that matters now: is this gap getting better,
+            getting worse, or simply being tolerated?
+          </p>
+        </section>
+
+        <section>
+          <h2>This must change</h2>
+          <p>
+            Health inequality is not only about hospitals or individual choices.
+            It is about income, housing, work, education, transport, air, safety,
+            services, stress and power. It is about whether people have the
+            conditions that let them live long and well.
+          </p>
+          <p>
+            A fairer city would not ask people to absorb these differences as the
+            price of geography. It would treat them as a public responsibility:
+            something to measure honestly, explain clearly and reduce deliberately.
+          </p>
+        </section>
+      </article>
+
+      <section class="closing-call" id="change">
+        <div>
+          <p class="section-label">The challenge</p>
+          <h2>The question is not only where the gap is. It is whether we are closing it.</h2>
+        </div>
+        <p>
+          The map is a starting point. The next work is to track whether the
+          inequalities are narrowing, widening or shifting, and to connect that
+          evidence to decisions about place. The human test is simple: fewer
+          years should not be the expected cost of being born in the wrong part
+          of the same city.
+        </p>
+      </section>
+
+      <section class="source-strip" aria-label="Data and source links">
+        <a href="/technical-note/">Technical note</a>
+        <a href="data/metro_station_msoa_life_expectancy_deprivation_data.csv">Station data CSV</a>
+        <a href="https://github.com/akalysis/metro_map_le">GitHub repository</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Andrew Kingston PhD CStat SFHEA</p>
+      <p>Draft microsite for a public blog on Newcastle, deprivation and health inequality.</p>
+    </footer>
+
+    <script>
+      const video = document.querySelector("#metroVideo");
+      const buttons = document.querySelectorAll("[data-time]");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const seconds = Number(button.dataset.time);
+          if (!Number.isFinite(seconds)) return;
+          video.currentTime = seconds;
+          video.play();
+        });
+      });
+    </script>
+  </body>
+</html>

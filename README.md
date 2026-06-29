@@ -1,0 +1,26 @@
+# Newcastle Metro Life Expectancy Microsite
+
+This repository contains a static Vercel-ready microsite for a public blog post
+about Newcastle, deprivation and life expectancy around the Tyne and Wear Metro.
+
+## Contents
+
+- `index.html` - the public story page with the embedded Metro animation.
+- `technical-note/index.html` - data sources, calculation notes and limitations.
+- `assets/metro_life_expectancy_male_female_comparison_animation.mp4` - the embedded animation.
+- `data/metro_station_msoa_life_expectancy_deprivation_data.csv` - station-local data used in the animation.
+
+## Deployment
+
+The site is plain static HTML/CSS and can be deployed directly on Vercel from the
+repository root. No build step is required.
+
+## Core message
+
+The site frames the work as a human story: Andrew Kingston was born in a D1
+area, ranked 478 out of 33,755 English LSOAs, and uses the Metro map to explore
+how life expectancy inequality is visible across familiar local geography.
+
+The current estimates are area-based 2019 to 2023 life expectancy estimates.
+They are not individual predictions, but they show structural differences in the
+conditions connected to health and length of life.
