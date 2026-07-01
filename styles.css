@@ -363,7 +363,7 @@ video {
 }
 
 .closing-call p:last-child {
-  align-self: end;
+  align-self: start;
   margin-bottom: 0;
   font-size: 1.16rem;
 }
